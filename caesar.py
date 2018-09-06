@@ -35,6 +35,3 @@ class Caesar(Cipher):
                 output.append(self.BACKWARD[index-self.offset])
         return ''.join(output)
 
-
-
-
