@@ -4,14 +4,18 @@ from ciphers import Cipher
 
 
 class Keyword(Cipher):
+    """keyword cipher encrypts the data by matching the letter with a letter in a special alphabet
+    which starts with the keyword that was given & for decryption vice versa.
+    """
 
-    def __init__(self, key='PYTHON'):
+    def __init__(self, key):
         self.key = key
-        self.arr = self.fill_array(self.key)
+        self.arr = Keyword.fill_array(self.key)
         self.keyword_dict = {key_lttr: letter for letter, key_lttr in zip(list(string.ascii_uppercase), self.arr)}
 
-# TODO: YOU SHOULD LOOK UP FOR STATIC METHODS FOR THE METHOD BELOW
-    def fill_array(self, key):
+    @staticmethod
+    def fill_array(key):
+        """creates an array according to the key for creating a dictionary for keyword cipher encryption purposes"""
         arr = list(key)
         for letter in string.ascii_uppercase:
             if letter not in list(key):
@@ -19,6 +23,7 @@ class Keyword(Cipher):
         return arr
 
     def encrypt(self, text):
+        """encrypts the text based on keyword cipher encryption method"""
         output = []
         text = text.upper()
         text_list = list(text)
@@ -27,6 +32,7 @@ class Keyword(Cipher):
         return ''.join(output)
 
     def decrypt(self, text):
+        """decrypts the formally encrypted text based on keyword cipher encryption method"""
         output = []
         text = text.upper()
         text_list = list(text)
@@ -35,12 +41,8 @@ class Keyword(Cipher):
         return ''.join(output)
 
     def get_key(self, letter):
+        """creating a method for getting the key in the dictionary when the value is given."""
         for key, value in self.keyword_dict.items():
             if value == letter:
                 return key
         return letter  # returns the letter itself in case the letter is a non-alpha element
-
-
-kd = Keyword()
-print(kd.encrypt('sena is the number 1 programmer and freelancer in the world !!! @ # '))
-print(kd.decrypt('QOIP CQ RBO ISGYOM 1 KMJAMPGGOM PIH NMOOFPITOM CI RBO VJMFH !!! @ # '))

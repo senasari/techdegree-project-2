@@ -4,6 +4,10 @@ from ciphers import Cipher
 
 
 class Caesar(Cipher):
+    """caesar cipher encrypts the text by replacing the letter with the letter
+    that is 3 letter ahead alphabetically and decrypts vice versa.
+    """
+
     FORWARD = string.ascii_uppercase * 3
 
     def __init__(self, offset=3):
@@ -12,6 +16,7 @@ class Caesar(Cipher):
         self.BACKWARD = string.ascii_uppercase[:self.offset+1] + string.ascii_uppercase
 
     def encrypt(self, text):
+        """encrypts the text based on caesar encryption method"""
         output = []
         text = text.upper()
         for char in text:
@@ -24,6 +29,7 @@ class Caesar(Cipher):
         return ''.join(output)
 
     def decrypt(self, text):
+        """decrypts the formally encrypted text based on caesar encryption method"""
         output = []
         text = text.upper()
         for char in text:
@@ -34,4 +40,3 @@ class Caesar(Cipher):
             else:
                 output.append(self.BACKWARD[index-self.offset])
         return ''.join(output)
-
