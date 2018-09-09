@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dcda2171-5a53-4ed8-a914-4d21ad84a778" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/secret_messages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/affine.py" beforeDir="false" afterPath="$PROJECT_DIR$/affine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atbash.py" beforeDir="false" afterPath="$PROJECT_DIR$/atbash.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caesar.py" beforeDir="false" afterPath="$PROJECT_DIR$/caesar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyword_cipher.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyword_cipher.py" afterDir="false" />
-    </list>
+    <list default="true" id="dcda2171-5a53-4ed8-a914-4d21ad84a778" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +12,7 @@
     <session id="-1638721754">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.opened" value="2" />
         </counts>
@@ -109,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/secret_messages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="119" selection-start-line="9" selection-start-column="119" selection-end-line="9" selection-end-column="119" />
+            <state relative-caret-position="77">
+              <caret line="9" column="69" lean-forward="true" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
                 <marker date="1536363595344" expanded="true" signature="113:114" ph="..." />
@@ -462,8 +455,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/secret_messages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="119" selection-start-line="9" selection-start-column="119" selection-end-line="9" selection-end-column="119" />
+        <state relative-caret-position="77">
+          <caret line="9" column="69" lean-forward="true" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
             <marker date="1536363595344" expanded="true" signature="113:114" ph="..." />
