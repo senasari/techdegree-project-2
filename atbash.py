@@ -4,13 +4,10 @@ from ciphers import Cipher
 
 
 class Atbash(Cipher):
-    """atbash cipher encrypts the data by replacing the letter
-    with the corresponding letter in the reversed alphabet
-    -for decryption vice versa
-    """
+    """atbash cipher encrypts the data by replacing the letter with the corresponding letter in the reversed alphabet
+    -for decryption vice versa"""
 
-    atbash_dict = {forward_letter: backward_letter
-                   for forward_letter, backward_letter
+    atbash_dict = {forward_letter: backward_letter for forward_letter, backward_letter
                    in zip(string.ascii_uppercase, string.ascii_uppercase[::-1])}
 
     def encrypt(self, text):
@@ -23,7 +20,7 @@ class Atbash(Cipher):
         return ''.join(output)
 
     def decrypt(self, text):
-        """decrypts the formally encrypted text based on caesar method
+        """decrypts the formally encrypted text based on caesar encryption method
          -which is the same process with encrypting the text
          """
         return self.encrypt(text)

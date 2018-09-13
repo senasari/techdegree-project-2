@@ -4,15 +4,11 @@ from ciphers import Cipher
 
 
 class Affine(Cipher):
-    """affine cipher encrypts the text by getting the index of the
-     letter in the alphabet and applies a formula
-     and replaces the result number
-     with the letter in the alphabet of that index
-      and for decryption vice versa.
-      """
+    """affine cipher encrypts the text by getting the index of the letter in the alphabet and applies a formula
+     and replaces the result number with the letter in the alphabet of that index
+      and for decryption vice versa."""
 
-    affine_dict = {number: letter for letter, number
-                   in zip(string.ascii_uppercase, range(0, 26))}
+    affine_dict = {number: letter for letter, number in zip(string.ascii_uppercase, range(0, 26))}
 
     def __init__(self, coefficient=3, plus_nmbr=10, alpha_count=26):
         self.coefficient = coefficient
@@ -34,9 +30,7 @@ class Affine(Cipher):
         return ''.join(output)
 
     def decrypt(self, text):
-        """decrypts the formally encrypted text based on
-        affine encryption method
-        """
+        """decrypts the formally encrypted text based on affine encryption method"""
         output = []
         text = text.upper()
         text_list = list(text)
@@ -47,8 +41,7 @@ class Affine(Cipher):
                 i = 1
                 while True:
                     if (i*self.alpha_count + count) % self.coefficient == 0:
-                        count = ((i*self.alpha_count + count)
-                                 / self.coefficient) % self.alpha_count
+                        count = ((i*self.alpha_count + count) / self.coefficient) % self.alpha_count
                         count = self.affine_dict.get(count)
                         break
                     else:
@@ -57,9 +50,7 @@ class Affine(Cipher):
         return ''.join(output)
 
     def get_nmbr(self, value):
-        """creating a method for getting the key in the dictionary
-        when the value is given.
-        """
+        """creating a method for getting the key in the dictionary when the value is given."""
         for nmbr, lttr in self.affine_dict.items():
             if lttr == value:
                 return nmbr

@@ -12,10 +12,8 @@ class Caesar(Cipher):
 
     def __init__(self, offset=3):
         self.offset = offset
-        self.FORWARD = string.ascii_uppercase + \
-            string.ascii_uppercase[:self.offset+1]
-        self.BACKWARD = string.ascii_uppercase[:self.offset+1] + \
-            string.ascii_uppercase
+        self.FORWARD = string.ascii_uppercase + string.ascii_uppercase[:self.offset+1]
+        self.BACKWARD = string.ascii_uppercase[:self.offset+1] + string.ascii_uppercase
 
     def encrypt(self, text):
         """encrypts the text based on caesar encryption method"""
@@ -31,9 +29,7 @@ class Caesar(Cipher):
         return ''.join(output)
 
     def decrypt(self, text):
-        """decrypts the formally encrypted text based on
-        caesar encryption method
-        """
+        """decrypts the formally encrypted text based on caesar encryption method"""
         output = []
         text = text.upper()
         for char in text:
